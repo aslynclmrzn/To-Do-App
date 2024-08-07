@@ -1,0 +1,174 @@
+$background: #cdcdcd;
+$shadow: #d0d0d1;
+$highlight: #ffffff;
+$primary-color: #5000c0;
+$gradient-start: #601C87;
+$gradient-middle1: #852970;
+$gradient-middle2: #A1335F;
+$gradient-middle3: #B43A53;
+$gradient-middle4: #C94146;
+$gradient-middle5: #D7473D;
+$gradient-end: #EB4E31;
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+.logo {
+  height: 40px;
+  margin-right: 10px;
+}
+.containerLeft {
+  position: relative;
+  padding: 30px;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 9px 9px 16px rgba(0, 0, 0, 0.2), -9px -9px 16px rgba(255, 255, 255, 0.7);
+  margin: 25px;
+  background-color: #ffffff;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    right: -4px;
+    bottom: -4px;
+    background: linear-gradient(90deg, $gradient-start, $gradient-middle1, $gradient-middle2, $gradient-middle3, $gradient-middle4, $gradient-middle5, $gradient-end);
+    z-index: -1;
+    border-radius: 16px; // Adjust based on container border-radius + border width
+  }
+
+  .inner {
+    position: relative;
+    background: $background;
+    border-radius: 12px;
+    padding: 30px;
+    z-index: 1;
+  }
+}
+
+.h4 {
+  text-align: center;
+  padding-top: 0px;
+  padding-bottom: 20px;
+  font-size: 2rem;
+  color: #601C87;
+  margin-bottom: 20px;
+}
+
+.datePicker {
+  width: 100%;
+  box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.1), inset -2px -2px 5px rgba(255, 255, 255, 0.7);
+}
+
+.addTaskContainer {
+  width: 100%;
+  margin-top: 0px;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.addTaskButton {
+  background: $primary-color;
+  color: $highlight;
+  padding: 10px 20px;
+  border-radius: 8px;
+  box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.2), -6px -6px 12px rgba(255, 255, 255, 0.5);
+  transition: all 0.3s ease;
+  width: 100%;
+
+  &:hover {
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2), -2px -2px 4px rgba(255, 255, 255, 0.5);
+  }
+}
+
+.filterContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.filterButton {
+  background: $background;
+  color: #333;
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: lighten($background, 5%);
+    box-shadow: 6px 6px 12px $shadow, -6px -6px 12px $highlight;
+  }
+
+  &:active {
+    box-shadow: inset 2px 2px 5px $shadow, inset -2px -2px 5px $highlight;
+  }
+}
+
+
+
+.formControl {
+  background: #edebeb;
+  border-radius: 8px;
+  box-shadow: 2px 2px 0px #ffffff, -2px -2px 0px #ffffff;
+  padding: 8px;
+  transition: all 0.3s ease-in-out;
+  margin-bottom: 10px;
+  width: 100%;
+  margin-left: 5px;
+}
+
+.listContainer {
+  display: flex;
+  align-items: center;
+}
+
+.iconButton {
+  background: #e7e7e7;
+  border-radius: 50%;
+  box-shadow: 4px 4px 8px #d0d0d0, -4px -4px 8px #ffffff;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    box-shadow: 2px 2px 4px #d0d0d0, -2px -2px 4px #ffffff;
+  }
+}
+
+.scrollableContainer {
+  height: 450px; 
+  overflow-y: scroll;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+
+.header {
+  padding: 25px;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 9px 9px 16px $shadow, -9px -9px 16px $highlight;
+  margin: 20px;
+  background: linear-gradient(90deg, #601C87, #852970, #A1335F, #B43A53, #C94146, #D7473D, #EB4E31);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 25px  170px 10px 170px;
+  h1 {
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin: 0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.textField {
+  color: #a3b1c6;
+  box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.1), inset -2px -2px 5px rgba(255, 255, 255, 0.7);
+}
