@@ -13,7 +13,6 @@ The TodoList application is a task management tool built with React and Material
 - **Delete All Tasks**: Users can delete all tasks at once.
 - **Filter Tasks**: Users can filter tasks by status (All, In Progress, Completed).
 - **Snackbar Notifications**: Users receive notifications for actions like deleting all tasks.
-- **Responsive Design**: The application is designed to be responsive and user-friendly.
 
 ## Getting Started
 
